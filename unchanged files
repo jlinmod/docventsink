@@ -1,0 +1,20 @@
+for doc vent removal 4-26-25
+
+cd /mnt/lustre/letscher/jsl1063/my_cesm_sandbox_vents/components/pop/bld
+get build-namelist
+
+cd /mnt/lustre/letscher/jsl1063/my_cesm_sandbox_vents/components/pop/bld/namelist_files
+get namelist_defaults_pop.xml
+get namelist_definition_pop.xml
+
+cd /mnt/lustre/letscher/jsl1063/my_cesm_sandbox_vents/components/pop/source
+get ecosys_forcing_mod.F90
+
+cd /mnt/lustre/letscher/jsl1063/my_cesm_sandbox_vents/components/pop/externals/MARBL/src
+Get mabl_diagnostics_mod.F90
+Get marbl_interior_tendency_mod.F90
+Get marbl_interface_private_types.F90
+Get marbl_init_mod.F90
+
+
+
