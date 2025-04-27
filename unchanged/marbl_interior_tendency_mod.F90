@@ -342,7 +342,7 @@ contains
 
     call compute_dissolved_organic_matter (km, marbl_tracer_indices, num_PAR_subcols, &
          PAR, zooplankton_derived_terms, autotroph_derived_terms,   &
-         delta_z1, tracer_local(:, :), dissolved_organic_matter)
+         delta_z1, tracer_local(:, :), dissolved_organic_matter, docfluidy)
 
     do k = 1, km
 
