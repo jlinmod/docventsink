@@ -383,7 +383,7 @@ contains
     namelist /ecosys_forcing_data_nml/                                        &
          dust_flux_source, dust_flux_input, iron_flux_source,                 &
          dust_ratio_thres, fe_bioavail_frac_offset, dust_ratio_to_fe_bioavail_frac_r, &
-         iron_flux_input, fesedflux_input, feventflux_input, docfluidy_input    &
+         iron_flux_input, fesedflux_input, feventflux_input, docfluidy_input,    &
          o2_consumption_scalef_opt, o2_consumption_scalef_const,              &
          o2_consumption_scalef_input,                                         &
          p_remin_scalef_opt, p_remin_scalef_const, p_remin_scalef_input,      &
