@@ -268,6 +268,7 @@ module marbl_interface_private_types
      real(r8), allocatable :: DOC_prod(:)         ! production of DOC (mmol C/m^3/sec)
      real(r8), allocatable :: DOC_remin(:)        ! remineralization of DOC (mmol C/m^3/sec)
      real(r8), allocatable :: DOCr_remin(:)       ! remineralization of DOCr
+     real(r8), allocatable :: DOCr_sed_remin(:)       ! remineralization of DOCr vents
      real(r8), allocatable :: DON_prod(:)         ! production of DON
      real(r8), allocatable :: DON_remin(:)        ! remineralization of DON
      real(r8), allocatable :: DONr_remin(:)       ! remineralization of DONr
@@ -601,6 +602,7 @@ module marbl_interface_private_types
     integer(int_kind) :: DOC_prod
     integer(int_kind) :: DOC_remin
     integer(int_kind) :: DOCr_remin
+    integer(int_kind) :: DOCr_sed_remin
     integer(int_kind) :: DON_prod
     integer(int_kind) :: DON_remin
     integer(int_kind) :: DONr_remin
@@ -904,6 +906,7 @@ contains
       allocate(this%DOC_prod(num_levels))
       allocate(this%DOC_remin(num_levels))
       allocate(this%DOCr_remin(num_levels))
+      allocate(this%DOCr_sed_remin(num_levels))
       allocate(this%DON_prod(num_levels))
       allocate(this%DON_remin(num_levels))
       allocate(this%DONr_remin(num_levels))
@@ -923,6 +926,7 @@ contains
        deallocate(this%DOC_prod)
        deallocate(this%DOC_remin)
        deallocate(this%DOCr_remin)
+       deallocate(this%DOCr_sed_remin)
        deallocate(this%DON_prod)
        deallocate(this%DON_remin)
        deallocate(this%DONr_remin)
