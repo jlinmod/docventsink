@@ -231,6 +231,9 @@ contains
          pressure            => interior_tendency_forcings(interior_tendency_forcing_indices%pressure_id)%field_1d(1,:), &
          salinity            => interior_tendency_forcings(interior_tendency_forcing_indices%salinity_id)%field_1d(1,:), &
          fesedflux           => interior_tendency_forcings(interior_tendency_forcing_indices%fesedflux_id)%field_1d(1,:),&
+         docfluidy           => interior_tendency_forcings(interior_tendency_forcing_indices%docfluidy_id)%field_1d(1,:),&
+
+         DOCr_sed_remin         => dissolved_organic_matter%DOCr_sed_remin(:),    & ! INPUT DOCr_sed_remin rate (mmol C/m^3/sec)
 
          po4_ind           => marbl_tracer_indices%po4_ind,         &
          no3_ind           => marbl_tracer_indices%no3_ind,         &
@@ -2128,10 +2131,10 @@ contains
         if (k == 1) then
           do subcol_ind = 1, PAR_nsubcols
             if ((PAR_col_frac(subcol_ind) > c0) .and. (PAR_in(subcol_ind) > 1.0_r8)) then
-              work = PAR_col_frac(subcol_ind) * (log(PAR_in(subcol_ind))*0.4373_r8) * (10.0e2_r8/dz1)
-              DOCr_reminR = DOCr_reminR + work * DOMr_reminR_photo
-              DONr_reminR = DONr_reminR + work * DOMr_reminR_photo
-              DOPr_reminR = DOPr_reminR + work * DOMr_reminR_photo
+  !            work = PAR_col_frac(subcol_ind) * (log(PAR_in(subcol_ind))*0.4373_r8) * (10.0e2_r8/dz1)
+              DOCr_reminR = DOMr_reminR_photo
+              DONr_reminR = DOMr_reminR_photo
+              DOPr_reminR = DOMr_reminR_photo
             endif
           end do
         endif
