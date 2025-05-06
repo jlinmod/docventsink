@@ -1366,6 +1366,7 @@ contains
     integer :: iblock, k, n ! loop indices
 
     real (r8), allocatable, target :: feventflux(:,:,:,:) !  Fe from vents
+    real (r8), allocatable, target :: docfluidy(:,:,:,:) !  fluid from vents
 
     do iblock = 1, nblocks_clinic
 
