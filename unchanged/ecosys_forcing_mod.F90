@@ -1012,7 +1012,7 @@ contains
                           unit_conv_factor=fesedflux_input%scale_factor,      &
                           rank=3, dim3_len=km, id=n)
           case ('DOC fluid Flux')
-            fesedflux_ind = n
+            docfluidy_ind = n
             call interior_tendency_forcings(n)%add_forcing_field(                &
                           field_source='file_time_invariant',                 &
                           marbl_varname=marbl_varname, field_units=units,     &
