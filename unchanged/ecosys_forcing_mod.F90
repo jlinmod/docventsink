@@ -1379,6 +1379,12 @@ contains
         end associate
       endif
 
+      if (docfluidy_ind > 0) then
+        associate (docfluidy => interior_tendency_forcings(docfluidy_ind)%field_1d)
+          call add_subsurf_to_bottom(land_mask(:,:,iblock), docfluidy(:,:,:,iblock), iblock)
+        end associate
+      endif
+
       !-----------------------------------------------------------------------
       ! apply unit_conv_factor to all non-time-varying interior and surface flux forcing fields
       !-----------------------------------------------------------------------
