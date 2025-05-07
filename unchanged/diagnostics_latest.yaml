@@ -678,6 +678,12 @@ DOCr_remin :
    vertical_grid : layer_avg
    frequency : low
    operator : average
+DOCr_sed_remin :
+   longname : DOCr vent Remineralization
+   units : mmol/m^3/s
+   vertical_grid : layer_avg
+   frequency : low
+   operator : average
 DON_prod :
    longname : DON Production
    units : mmol/m^3/s
@@ -771,6 +777,12 @@ Lig_deg :
 FESEDFLUX :
    longname : Iron Sediment Flux
    units : nmol/cm^2/s
+   vertical_grid : layer_avg
+   frequency : never
+   operator : average
+DOCFLUIDY :
+   longname : DOC fluid flux
+   units : 1/s
    vertical_grid : layer_avg
    frequency : never
    operator : average
