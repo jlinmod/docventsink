@@ -1978,6 +1978,18 @@ contains
         return
       end if
 
+      lname = 'DOC fluid Flux'
+      sname = 'DOCFLUIDY'
+      units = '1/s'
+      vgrid = 'layer_avg'
+      truncate = .false.
+      call diags%add_diagnostic(lname, sname, units, vgrid, truncate,     &
+           ind%docfluidy, marbl_status_log)
+      if (marbl_status_log%labort_marbl) then
+        call marbl_logging_add_diagnostics_error(marbl_status_log, sname, subname)
+        return
+      end if
+
       ! Particulate 2D diags
 
       write(particulate_flux_ref_depth_str, "(I0,A)") particulate_flux_ref_depth, 'm'
