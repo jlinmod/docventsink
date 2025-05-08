@@ -4032,8 +4032,7 @@ contains
        write(log_message,"(A,E11.3e3,A,E11.3e3)") &
             'abs(Jint_Ctot)=', abs(diags(ind%Jint_Ctot)%field_2d(1)), &
             ' exceeds Jint_Ctot_thres=', Jint_Ctot_thres
-       call marbl_status_log%log_error(log_message, subname, ElemInd=1)
-       return
+       call marbl_status_log%log_noerror(log_message, subname)
     end if
 
     end associate
