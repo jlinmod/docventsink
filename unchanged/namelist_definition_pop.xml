@@ -6121,6 +6121,47 @@ Default: none provided
 </entry>
 
 <entry
+id="docfluidy_input%filename"
+type="char*256"
+category="Forcing (Ecosystem)"
+group="ecosys_forcing_data_nml"
+input_pathname="abs" >
+Default: feventflux_gx3v7_5gmol_cesm1_97_2017.nc or feventflux_gx1v6_5gmol_cesm1_97_2017.nc
+</entry>
+
+<entry
+id="docfluidy_input%file_varname"
+type="char*256"
+category="Forcing (Ecosystem)"
+group="ecosys_forcing_data_nml" >
+Default: 'DOCFLUIDYR'
+</entry>
+
+<entry
+id="docfluidy_input%file_fmt"
+type="char*256"
+category="Forcing (Ecosystem)"
+group="ecosys_forcing_data_nml" >
+Default: 'nc'
+</entry>
+
+<entry
+id="docfluidy_input%scale_factor"
+type="real"
+category="Forcing (Ecosystem)"
+group="ecosys_forcing_data_nml" >
+Default: 1
+</entry>
+
+<entry
+id="docfluidy_input%default_val"
+type="real"
+category="Forcing (Ecosystem)"
+group="ecosys_forcing_data_nml" >
+Default: none provided
+</entry>
+	
+<entry
 id="o2_consumption_scalef_opt"
 type="char*256"
 category="Forcing (Ecosystem)"
